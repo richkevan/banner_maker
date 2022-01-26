@@ -1,0 +1,74 @@
+html, body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+select {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 5vh;
+}
+.aside {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.main {
+    height: 90vh;
+    width: 100vw;
+    background-color: darkblue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    min-width: 640px;
+    min-height: 320px;
+    max-width: 1280px;
+    max-height: 640px;
+    width: 100vw;
+    height: 50vw;
+    background-color: white;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 3rem;
+    height: 3rem;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modalContent {
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
