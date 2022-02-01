@@ -28,26 +28,8 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <div className="aside">
-      <h1>Github Generator</h1>
-      <select onChange={SetToolbar}>
-        <option value="background">Background</option>
-        <option value="text">Text</option>
-      </select>
-      {menu === "background" && 
-      <>
-        <ColorPicker />
-        <AddPicture onClick={AddPhoto}/>
-      </>
-      }
-      {menu === "text" && <input type={"text"} />}
+      <h1>Banner Maker</h1>
       </div>
-      <div className="main">
-          <div className="canvas"></div>
-      </div>
-      {showModal ? <Modal
-        modalContent={modalContent}  
-        showModal={showModal} 
-        setShowModal={setShowModal}/>: null}
     </div>
   );
 }
