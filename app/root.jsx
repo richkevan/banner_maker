@@ -28,7 +28,7 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}
-        {process.env.PEXELS =! null && <div>Pexels: PEXELS</div>}
+
       </body>
     </html>
   );
