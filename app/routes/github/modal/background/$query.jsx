@@ -5,7 +5,7 @@ export const loader = async ({params}) => {
 
     const response = await fetch(url, {
         headers: {
-            Authorization: proces.env.PEXELS
+            Authorization: process.env.PEXELS
         }})
     return response.json()
 }
