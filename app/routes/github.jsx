@@ -7,20 +7,22 @@ export function links() {
   return [{rel:"stylesheet", href:styles}]
 }
 
-
 const Github = () => {
-    const [backgroundColor, setBackgroundColor] = useState("#fff");
-    const [backgroundImage, setBackgroundImage] = useState("inherit");
-    const [imagePosition, setImagePosition] = useState("center");
-    const [imageRepeat, setImageRepeat] = useState("no-repeat");
-
+    const [canvasStyle, setCanvasStyle] = useState({
+        canvasBackgroundColor:"#ffffff",
+        canvasBackgroundImage:"none",
+        canvasBackgroundSize:"cover",
+        canvasBackgroundRepeat:"no-repeat",
+        canvasBackgroundPosition:"center"
+    });
+    
     return(
         <div>
             <h1>Github</h1>
             <Link to="/github/modal/background">Background</Link>
-            <Outlet context={[backgroundColor, setBackgroundColor]}/>
+            <Outlet context={[canvasStyle, setCanvasStyle]}/>
             <div className="main">
-                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: backgroundColor, background: `${backgroundImage} ${imagePosition} ${imageRepeat}`}}></div>
+                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: canvasStyle.canvasBackgroundColor, backgroundImage: canvasStyle.canvasBackgroundImage, backgroundPosition: canvasStyle.canvasBackgroundPosition, backgroundRepeat: canvasStyle.canvasBackgroundRepeat}}></div>
             </div>
         </div>
     )

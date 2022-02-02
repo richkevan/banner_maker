@@ -1,6 +1,7 @@
 import { renderToString } from "react-dom/server";
 import { RemixServer } from "remix";
 
+
 export default function handleRequest(
   request,
   responseStatusCode,

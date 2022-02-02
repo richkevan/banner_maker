@@ -7,11 +7,14 @@ import {
   ScrollRestoration
 } from "remix";
 
+
 export function meta() {
   return { title: "New Remix App" };
 }
 
 export default function App() {
+  
+
   return (
     <html lang="en">
       <head>

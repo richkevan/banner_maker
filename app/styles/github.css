@@ -16,6 +16,7 @@
     width: 25vw;
     height: 100vh;
     background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 5px 2px hsla(0, 0%, 0%, 0.5);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -43,4 +44,13 @@
     height: 3rem;
     background: url("/window-close-solid.svg") no-repeat center / cover;
     cursor: pointer;
+}
+
+.image-container {
+    position: absolute;
+    background-color: chocolate;
+    top: 25%;
+    left: 75%;
+    width: 50vw;
+    height: 50vh;
 }

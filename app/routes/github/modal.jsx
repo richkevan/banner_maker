@@ -2,12 +2,12 @@ import { Link, Outlet, useOutletContext } from "remix"
 
 
 const Modal = () => {
-    const [canvasColor, setCanvasColor] = useOutletContext()
+    const [canvasStyle, setCanvasStyle] = useOutletContext()
     return (
         <div className="modal">
             <h1>Modal</h1>
             <Link to="/github"><div className="close"></div></Link>
-            <Outlet context={[canvasColor, setCanvasColor]}/>
+            <Outlet context={[canvasStyle, setCanvasStyle]}/>
         </div>
     )
 }
