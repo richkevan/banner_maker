@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, Outlet, useOutletContext } from "remix"
+import { Form, Link, Outlet, useOutletContext } from "remix"
 
 
 
@@ -21,10 +21,12 @@ const ModalBackground = () => {
         <div className="modal-background">
             <label htmlFor="color"><h3>Background Color</h3>
             <input type="color" id="color" value={canvasStyle.canvasBackgroundColor} onChange={onChange}/></label>
+                <Form method="get" action={`/github/modal/background/${query}`}>
                 <label htmlFor="search"><h3>Image Search</h3>
                 <input type="search" id="search" value={query} onChange={queryValue}/>
                 </label>
-                <Link to={`/github/modal/background/${query}`}><input type="submit" value="Search" /></Link>
+                <input type="submit" value="Search" />
+                </Form>
             <Outlet context={[canvasStyle, setCanvasStyle]}/>
         </div>
     )
