@@ -16,6 +16,7 @@ const ModalBackground = () => {
     const queryValue = (e) => {
         setQuery(e.target.value)
     }
+    
     return (
         <div className="modal-background">
             <label htmlFor="color"><h3>Background Color</h3>

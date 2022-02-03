@@ -1,3 +1,12 @@
+.github-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 3rem;
+}
+
+
 .main {
     width: 100vw;
     height: 90vh;
@@ -22,19 +31,9 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 100;
+    overflow: hidden;
 }
 
-.modal::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25vw;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
-    filter: blur(20px);
-    z-index: -1;
-}
 
 .close {
     position: absolute;
@@ -46,11 +45,18 @@
     cursor: pointer;
 }
 
+.modal-background {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .image-container {
-    position: absolute;
-    background-color: chocolate;
-    top: 25%;
-    left: 75%;
-    width: 50vw;
-    height: 50vh;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    gap: 2.5rem;
+    width: 25vw;
+    height:75vh;
 }
