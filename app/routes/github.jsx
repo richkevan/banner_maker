@@ -28,7 +28,11 @@ const Github = () => {
             </div>
             <Outlet context={[canvasStyle, setCanvasStyle]}/>
             <div className="main">
-                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: canvasStyle.canvasBackgroundColor, backgroundImage: canvasStyle.canvasBackgroundImage, backgroundPosition: canvasStyle.canvasBackgroundPosition, backgroundRepeat: canvasStyle.canvasBackgroundRepeat, backgroundSize: canvasStyle.canvasBackgroundSize}}></div>
+                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: canvasStyle.canvasBackgroundColor, backgroundImage: canvasStyle.canvasBackgroundImage, backgroundPosition: canvasStyle.canvasBackgroundPosition, backgroundRepeat: canvasStyle.canvasBackgroundRepeat, backgroundSize: canvasStyle.canvasBackgroundSize}}>
+                <h1>{canvasStyle.canvasTitle}</h1>
+                <h3>{canvasStyle.canvasSubtitle}</h3>
+                <p>{canvasStyle.canvasText}</p>
+                </div>
             </div>
         </div>
     )
