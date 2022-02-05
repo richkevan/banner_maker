@@ -16,7 +16,10 @@ const Github = () => {
         canvasBackgroundPosition:"center",
         canvasTitle:"",
         canvasSubtitle:"",
-        canvasText:""
+        canvasText:"",
+        canvasFontSize:12,
+        canvasFontColor:"#000000",
+        canvasFontAlignment:"left"
     });
  
     return(
@@ -28,9 +31,9 @@ const Github = () => {
             </div>
             <Outlet context={[canvasStyle, setCanvasStyle]}/>
             <div className="main">
-                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: canvasStyle.canvasBackgroundColor, backgroundImage: canvasStyle.canvasBackgroundImage, backgroundPosition: canvasStyle.canvasBackgroundPosition, backgroundRepeat: canvasStyle.canvasBackgroundRepeat, backgroundSize: canvasStyle.canvasBackgroundSize}}>
-                <h1>{canvasStyle.canvasTitle}</h1>
-                <h3>{canvasStyle.canvasSubtitle}</h3>
+                <div className="canvas" style={{width:'1280px',height:'640px', backgroundColor: canvasStyle.canvasBackgroundColor, backgroundImage: canvasStyle.canvasBackgroundImage, backgroundPosition: canvasStyle.canvasBackgroundPosition, backgroundRepeat: canvasStyle.canvasBackgroundRepeat, backgroundSize: canvasStyle.canvasBackgroundSize, fontSize: canvasStyle.canvasFontSize, color: canvasStyle.canvasFontColor, textAlign: canvasStyle.canvasTextAlign}}>
+                <h1 style={{fontSize: "2em"}}>{canvasStyle.canvasTitle}</h1>
+                <h3 style={{fontSize: "1.5em"}}>{canvasStyle.canvasSubtitle}</h3>
                 <p>{canvasStyle.canvasText}</p>
                 </div>
             </div>

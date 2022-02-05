@@ -21,12 +21,12 @@ const ModalBackground = () => {
         <div className="modal-background">
             <label htmlFor="color"><h3>Background Color</h3>
             <input type="color" id="color" value={canvasStyle.canvasBackgroundColor} onChange={onChange}/></label>
-                <Form method="get" action={`/github/modal/background/${query}`}>
+                {/* <Form method="get" action={`/github/modal/background/${query}`}> */}
                 <label htmlFor="search"><h3>Image Search</h3>
                 <input type="search" id="search" value={query} onChange={queryValue}/>
                 </label>
-                <input type="submit" value="Search" />
-                </Form>
+                <Link to={`/github/modal/background/${query}`}><button type="submit" value="Search" /></Link>
+                {/* </Form> */}
             <Outlet context={[canvasStyle, setCanvasStyle]}/>
         </div>
     )

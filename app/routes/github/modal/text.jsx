@@ -16,8 +16,15 @@ const Text = () => {
             case "text":
                 canvasStyle2.canvasText = e.target.value
                 break;
+            case "fontSize":
+                canvasStyle2.canvasFontSize = parseInt(e.target.value)
+                break;
+            case "fontColor":
+                canvasStyle2.canvasFontColor = e.target.value
+                break;
         }
         setCanvasStyle(canvasStyle2)
+        console.log(canvasStyle2, canvasStyle)
     }
 
     return (
