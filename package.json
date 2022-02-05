@@ -4,8 +4,8 @@
   "description": "",
   "license": "",
   "scripts": {
-    "build": "cross-env remix build",
-    "dev": "cross-env run-p dev:*",
+    "build": "cross-env NODE_ENV=production remix build",
+    "dev": "cross-env NODE_ENV=development run-p dev:*",
     "postinstall": "remix setup cloudflare-pages",
     "dev:remix": "remix watch",
     "dev:wrangler": "wrangler pages dev ./public --watch ./build",

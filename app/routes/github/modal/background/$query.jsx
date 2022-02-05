@@ -2,15 +2,11 @@ import { useLoaderData, useOutletContext } from "remix"
 import axios from "axios"
 
 
-export const loader = async ({params}) => {
-    return {enviroment: process.env.NODE_ENV, pexels: process.env.REACT_APP_PEXELS}
-}
-
 const Query = () => {
     const [canvasStyle, setCanvasStyle] = useOutletContext()
     const photos = useLoaderData()
 
-    console.log(photos)
+    console.log(process.env.REACT_APP_PEXELS)
     
     const onChange = (img) => {
         let canvasStyle2 = Object.assign({}, canvasStyle)
